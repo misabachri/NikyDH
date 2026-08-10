@@ -1,0 +1,67 @@
+/* Cabinet Grotesk – nadpisový font */
+@font-face {
+  font-family: "Cabinet Grotesk";
+  src: url("../fonts/CabinetGrotesk-Regular.woff2") format("woff2"),
+       url("../fonts/CabinetGrotesk-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cabinet Grotesk";
+  src: url("../fonts/CabinetGrotesk-Medium.woff2") format("woff2"),
+       url("../fonts/CabinetGrotesk-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cabinet Grotesk";
+  src: url("../fonts/CabinetGrotesk-Bold.woff2") format("woff2"),
+       url("../fonts/CabinetGrotesk-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cabinet Grotesk";
+  src: url("../fonts/CabinetGrotesk-Extrabold.woff2") format("woff2"),
+       url("../fonts/CabinetGrotesk-Extrabold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cabinet Grotesk";
+  src: url("../fonts/CabinetGrotesk-Black.woff2") format("woff2"),
+       url("../fonts/CabinetGrotesk-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Satoshi – obsahový font */
+@font-face {
+  font-family: "Satoshi";
+  src: url("../fonts/Satoshi-Regular.woff2") format("woff2"),
+       url("../fonts/Satoshi-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("../fonts/Satoshi-Medium.woff2") format("woff2"),
+       url("../fonts/Satoshi-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("../fonts/Satoshi-Bold.woff2") format("woff2"),
+       url("../fonts/Satoshi-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
