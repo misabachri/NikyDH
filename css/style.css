@@ -328,6 +328,7 @@ section[id] { scroll-margin-top: 5.5rem; }
 }
 .about__media--placeholder .icon-tooth { width: 2.5rem; height: 2.5rem; }
 .about__media--placeholder span { font-size: var(--fs-sm); font-weight: 600; }
+.about__content #about-h2 { max-width: none; }
 .about__content p:not(.eyebrow) { margin-bottom: var(--sp-2); max-width: 60ch; }
 .about__content .btn { margin-top: var(--sp-2); }
 
@@ -367,16 +368,13 @@ section[id] { scroll-margin-top: 5.5rem; }
 .booking__content p:not(.eyebrow) { max-width: 40ch; opacity: 0.85; margin-bottom: var(--sp-3); }
 .booking__calendar {
   background: rgba(252,252,251,0.06);
-  border: 1px dashed rgba(252,252,251,0.3);
   border-radius: var(--radius-lg);
-  min-height: 16rem;
-  display: flex; align-items: center; justify-content: center;
-  text-align: center; opacity: 0.75; font-size: var(--fs-sm);
+  overflow: hidden;
 }
+.booking__calendar iframe { display: block; }
 
 @media (min-width: 900px) {
   .booking__grid { grid-template-columns: 0.8fr 1.2fr; gap: var(--sp-7); }
-  .booking__calendar { min-height: 22rem; }
 }
 
 /* ==========================================================================
@@ -412,28 +410,22 @@ section[id] { scroll-margin-top: 5.5rem; }
 .contact__col p { margin-bottom: var(--sp-1); }
 .contact__col a { text-decoration: none; font-weight: 600; }
 .contact__col a:hover { color: var(--color-accent-dark); }
-.contact__col h3 { font-size: var(--fs-h3); margin-block: var(--sp-1); }
-.contact__map { grid-column: 1 / -1; }
-.contact__map iframe {
-  width: 100%; height: 16rem; border: 0; border-radius: var(--radius-md);
-  filter: grayscale(0.5) saturate(0.7) contrast(0.95);
-}
+.contact__col-head { display: flex; align-items: center; gap: var(--sp-2); margin-bottom: var(--sp-2); }
+.contact__col h3 { font-size: var(--fs-h3); margin: 0; }
 
 @media (min-width: 700px) {
   .contact__grid { grid-template-columns: repeat(2, 1fr); }
   .contact__heading { grid-column: 1 / -1; }
 }
 @media (min-width: 1100px) {
-  .contact__grid { grid-template-columns: 1.2fr 0.9fr 0.9fr 0.9fr 1.3fr; }
+  .contact__grid { grid-template-columns: 1.2fr 1fr 1fr 1fr; }
   .contact__heading { grid-column: auto; }
-  .contact__map { grid-column: auto; }
-  .contact__map iframe { height: 100%; min-height: 14rem; }
 }
 
 /* ==========================================================================
    Footer
    ========================================================================== */
-.site-footer { background: var(--color-text); color: var(--color-on-dark); padding-block: var(--sp-6) var(--sp-4); }
+.site-footer { background: var(--color-text); color: var(--color-on-dark); padding-block: var(--sp-6) var(--sp-2); }
 .site-footer__inner { display: grid; gap: var(--sp-5); }
 .site-footer .logo { color: var(--color-on-dark); font-size: 1.4rem; gap: var(--sp-2); }
 .site-footer .logo small { color: rgba(252,252,251,0.65); font-size: 0.8rem; }
@@ -447,10 +439,10 @@ section[id] { scroll-margin-top: 5.5rem; }
 .site-footer__social a { color: var(--color-on-dark); opacity: 0.8; transition: opacity var(--transition); }
 .site-footer__social a:hover { opacity: 1; }
 
-.site-footer__divider { height: 1px; background: rgba(252,252,251,0.14); margin-top: var(--sp-6); }
+.site-footer__divider { height: 1px; background: rgba(252,252,251,0.14); margin-top: var(--sp-3); }
 .site-footer__bottom {
   display: flex; flex-direction: column; align-items: center; gap: var(--sp-1);
-  padding-top: var(--sp-3); font-size: var(--fs-sm); opacity: 0.65; text-align: center;
+  padding-top: var(--sp-2); font-size: var(--fs-sm); opacity: 0.65; text-align: center;
 }
 .site-footer__bottom p { margin: 0; }
 .site-footer__bottom a { color: inherit; text-decoration: underline; text-underline-offset: 0.2em; }
@@ -465,49 +457,6 @@ section[id] { scroll-margin-top: 5.5rem; }
 @media (min-width: 900px) {
   .site-footer__inner { grid-template-columns: 1fr 1.2fr 1fr; align-items: start; }
 }
-
-/* ==========================================================================
-   Cookie bar
-   ========================================================================== */
-.cookie-bar {
-  position: fixed; right: var(--sp-2); bottom: var(--sp-2); left: auto;
-  z-index: 300; background: var(--color-primary-bg); color: var(--color-text);
-  border: 1px solid rgba(56,70,79,0.15); border-radius: var(--radius-md);
-  box-shadow: var(--shadow-soft);
-  padding: var(--sp-3); display: flex; flex-direction: column; gap: var(--sp-2);
-  width: min(22rem, calc(100vw - var(--sp-2) * 2));
-}
-.cookie-bar[hidden] { display: none; }
-.cookie-bar p { font-size: var(--fs-sm); }
-.cookie-bar__actions { display: flex; flex-wrap: wrap; gap: var(--sp-1); justify-content: flex-end; }
-
-.cookie-modal {
-  position: fixed; inset: 0; z-index: 310;
-  background: rgba(20, 24, 26, 0.5);
-  display: flex; align-items: center; justify-content: center;
-  padding: var(--sp-2);
-}
-.cookie-modal[hidden] { display: none; }
-.cookie-modal__panel {
-  background: var(--color-primary-bg); color: var(--color-text);
-  border-radius: var(--radius-md); box-shadow: var(--shadow-soft);
-  padding: var(--sp-4); width: min(28rem, 100%);
-  display: flex; flex-direction: column; gap: var(--sp-2);
-}
-.cookie-modal__row {
-  display: flex; align-items: flex-start; justify-content: space-between; gap: var(--sp-2);
-  padding-block: var(--sp-1); border-top: 1px solid rgba(56,70,79,0.1);
-}
-.cookie-modal__row p { font-size: var(--fs-sm); opacity: 0.75; }
-.cookie-modal__row input { margin-top: 0.35rem; flex-shrink: 0; }
-.cookie-modal__actions { display: flex; flex-wrap: wrap; gap: var(--sp-1); justify-content: flex-end; margin-top: var(--sp-1); }
-
-.map-placeholder {
-  height: 16rem; display: flex; flex-direction: column;
-  align-items: center; justify-content: center; text-align: center; gap: var(--sp-2);
-  background: var(--color-extra); border-radius: var(--radius-md); padding: var(--sp-3);
-}
-@media (min-width: 1100px) { .map-placeholder { height: 100%; min-height: 14rem; } }
 
 /* ==========================================================================
    Scroll-reveal

@@ -24,7 +24,7 @@
 <link rel="stylesheet" href="css/fonts.css">
 <link rel="stylesheet" href="css/style.css">
 
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://www.google.com https://maps.gstatic.com https://maps.googleapis.com; style-src 'self'; script-src 'self'; frame-src https://www.google.com; font-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'">
 
 <script type="application/ld+json">
 {
@@ -188,11 +188,11 @@
   <section class="about" id="o-mne" aria-labelledby="about-h2">
     <div class="container about__grid">
       <div class="about__media">
-        <img src="images/nikyDH_omne.jpg" alt="Nikola Mourková, dentální hygienistka" width="1200" height="900" loading="lazy">
+        <img src="images/niky2.jpg" alt="Nikola Mourková, dentální hygienistka" width="1200" height="900" loading="lazy">
       </div>
       <div class="about__content">
-        <p class="eyebrow">O&nbsp;mně</p>
-        <h2 id="about-h2" class="section-title">Stomatologie a&nbsp;péče o&nbsp;úsměv mě baví přes 16&nbsp;let</h2>
+        <p class="eyebrow">Nikola Mourková</p>
+        <h2 id="about-h2" class="section-title">Péče o&nbsp;úsměv mě&nbsp;baví už&nbsp;přes 16&nbsp;let</h2>
         <p>Jmenuji se Nikola Mourková a&nbsp;jsem dentální hygienistka. Péči o&nbsp;úsměv se věnuji už&nbsp;16&nbsp;let a&nbsp;stále mě baví stejně jako na&nbsp;začátku.</p>
         <p>Pracuji s&nbsp;moderním kombinovaným přístrojem, který spojuje ultrazvuk a&nbsp;šetrné pískování – ošetření je díky tomu důkladné a&nbsp;zároveň příjemné. Kromě toho používám i&nbsp;ruční nástroje tam, kde je to potřeba.</p>
         <p>Ordinaci najdete v&nbsp;Karlových Varech, kde se starám o&nbsp;pacienty všech věkových kategorií – od&nbsp;dětí až&nbsp;po&nbsp;seniory. Ať přijdete na&nbsp;preventivní kontrolu, nebo řešíte konkrétní problém, budu se vám věnovat individuálně a&nbsp;s&nbsp;klidem.</p>
@@ -256,8 +256,15 @@
         <p>Vyberte si&nbsp;volný termín přímo v&nbsp;kalendáři, nebo mi zavolejte a&nbsp;domluvíme se telefonicky.</p>
         <a class="btn btn--accent" href="tel:+420775559223">Zavolat na&nbsp;recepci</a>
       </div>
-      <div class="booking__calendar" role="img" aria-label="Placeholder pro rezervační kalendář">
-        <p>Zde bude vložen rezervační kalendář<br><small>(iframe doplníme)</small></p>
+      <div class="booking__calendar">
+        <iframe
+          src="https://rezervace.navstevalekare.cz/nikolamourkova"
+          width="100%"
+          height="600"
+          style="border:0;"
+          loading="lazy"
+          title="Online rezervace">
+        </iframe>
       </div>
     </div>
   </section>
@@ -266,7 +273,7 @@
   <section class="faq" id="dotazy" aria-labelledby="faq-h2">
     <div class="container">
       <p class="eyebrow eyebrow--center">Časté dotazy</p>
-      <h2 id="faq-h2" class="section-title section-title--center">Nejčastější dotazy</h2>
+      <h2 id="faq-h2" class="section-title section-title--center">Co vám možná zajímá</h2>
       <div class="accordion">
         <div class="accordion__item is-open">
           <h3><button class="accordion__trigger" aria-expanded="true">Jak často bych měl/a navštěvovat dentální hygienu?</button></h3>
@@ -301,34 +308,34 @@
     <div class="container contact__grid">
       <div class="contact__col contact__heading">
         <p class="eyebrow">Kontakt</p>
-        <h2 id="contact-h2" class="section-title">Kontakt</h2>
-        <p>Ráda zodpovím vaše dotazy nebo s&nbsp;vámi domluvím termín.</p>
-        <!-- TODO: doplnit skutečný odkaz na kompletní ceník (PDF/stránka) -->
-        <a class="text-link" href="#">Kompletní ceník&nbsp;→</a>
+        <h2 id="contact-h2" class="section-title">Ráda zodpovím vaše dotazy nebo s&nbsp;vámi domluvím termín</h2>
       </div>
       <div class="contact__col">
-        <svg class="icon-tooth" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1L6.6 10.8Z"/></svg>
-        <h3>Telefon</h3>
+        <div class="contact__col-head">
+          <svg class="icon-tooth" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1L6.6 10.8Z"/></svg>
+          <h3>Telefon</h3>
+        </div>
         <p><a href="tel:+420775559223">+420&nbsp;775&nbsp;559&nbsp;223</a><br><small>recepce – objednání</small></p>
         <p><a href="tel:+420601284247">+420&nbsp;601&nbsp;284&nbsp;247</a><br><small>Nikola Mourková – hygienistka</small></p>
       </div>
       <div class="contact__col">
-        <svg class="icon-tooth" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M12 1a11 11 0 1 0 0 22 11 11 0 0 0 0-22Zm0 2.6a8.4 8.4 0 1 1 0 16.8 8.4 8.4 0 0 1 0-16.8Z"/><path fill="currentColor" d="M11.2 6.4a.9.9 0 0 1 1.8 0v5.1l3.3 1.9a.9.9 0 1 1-.9 1.6l-3.7-2.1a.9.9 0 0 1-.5-.8V6.4Z"/></svg>
-        <h3>Ordinační doba</h3>
-        <p>Pondělí – středa<br>8:00 – 16:00</p>
-        <p>Čtvrtek<br>8:00 – 18:00</p>
-        <p>Pátek<br>8:00 – 14:00</p>
+        <div class="contact__col-head">
+          <svg class="icon-tooth" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M12 1a11 11 0 1 0 0 22 11 11 0 0 0 0-22Zm0 2.6a8.4 8.4 0 1 1 0 16.8 8.4 8.4 0 0 1 0-16.8Z"/><path fill="currentColor" d="M11.2 6.4a.9.9 0 0 1 1.8 0v5.1l3.3 1.9a.9.9 0 1 1-.9 1.6l-3.7-2.1a.9.9 0 0 1-.5-.8V6.4Z"/></svg>
+          <h3>Ordinační doba</h3>
+        </div>
+        <p>Pondělí<br>8:00 – 12:00</p>
+        <p>Úterý<br>13:00 – 18:30</p>
+        <p>Středa<br>8:00 – 12:15, 13:00 – 14:00</p>
+        <p>Čtvrtek<br>8:00 – 12:15, 13:00 – 14:00</p>
+        <p>Pátek<br>8:00 – 12:15, 13:00 – 14:00</p>
       </div>
       <div class="contact__col">
-        <svg class="icon-tooth" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 1a9 9 0 0 0-9 9c0 6.3 8 12.6 8.3 12.9a1 1 0 0 0 1.4 0C13 22.6 21 16.3 21 10a9 9 0 0 0-9-9Zm0 12.5A3.5 3.5 0 1 1 12 6.5a3.5 3.5 0 0 1 0 7Z"/></svg>
-        <h3>Adresa</h3>
-        <p>Krymská 37<br>360&nbsp;01&nbsp;Karlovy Vary<br><small>1.&nbsp;patro, ordinace MUDr.&nbsp;Jecha</small></p>
-      </div>
-      <div class="contact__col contact__map" id="mapWrap" data-map-src="https://www.google.com/maps?q=Krymsk%C3%A1%2037%2C%20Karlovy%20Vary&output=embed">
-        <div class="map-placeholder" id="mapPlaceholder">
-          <p>Mapa se načte po&nbsp;povolení cookies pro&nbsp;zobrazení mapy.</p>
-          <button class="btn btn--outline btn--small" id="mapAllowBtn" type="button">Povolit a&nbsp;zobrazit mapu</button>
+        <div class="contact__col-head">
+          <svg class="icon-tooth" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 1a9 9 0 0 0-9 9c0 6.3 8 12.6 8.3 12.9a1 1 0 0 0 1.4 0C13 22.6 21 16.3 21 10a9 9 0 0 0-9-9Zm0 12.5A3.5 3.5 0 1 1 12 6.5a3.5 3.5 0 0 1 0 7Z"/></svg>
+          <h3>Adresa</h3>
         </div>
+        <p>Krymská 37<br>360&nbsp;01&nbsp;Karlovy Vary<br><small>1.&nbsp;patro, ordinace MUDr.&nbsp;Jecha</small></p>
+        <p><a class="text-link" href="https://www.google.com/maps?q=Krymsk%C3%A1%2037%2C%20Karlovy%20Vary" target="_blank" rel="noopener noreferrer">Zobrazit na&nbsp;mapě&nbsp;→</a></p>
       </div>
     </div>
   </section>
@@ -369,39 +376,6 @@
     <p>Webdesign: <a href="https://michaelabachri.cz" target="_blank" rel="noopener noreferrer">michaelabachri.cz</a></p>
   </div>
 </footer>
-
-<div class="cookie-bar" id="cookieBar" role="dialog" aria-live="polite" aria-label="Souhlas s&nbsp;používáním cookies" hidden>
-  <p>Tento web používá nezbytné soubory cookie pro&nbsp;správné fungování a&nbsp;volitelné cookie pro&nbsp;zobrazení mapy. Více v&nbsp;<a href="ochrana-osobnich-udaju.html">zásadách ochrany osobních údajů</a>.</p>
-  <div class="cookie-bar__actions">
-    <button class="btn btn--outline btn--small" id="cookieManage" type="button">Spravovat předvolby</button>
-    <button class="btn btn--ghost btn--small" id="cookieReject" type="button">Odmítnout</button>
-    <button class="btn btn--accent btn--small" id="cookieAccept" type="button">Přijmout vše</button>
-  </div>
-</div>
-
-<div class="cookie-modal" id="cookieModal" role="dialog" aria-modal="true" aria-label="Předvolby cookies" hidden>
-  <div class="cookie-modal__panel">
-    <h2>Předvolby cookies</h2>
-    <div class="cookie-modal__row">
-      <div>
-        <strong>Nezbytné</strong>
-        <p>Nutné pro&nbsp;základní fungování webu. Nelze vypnout.</p>
-      </div>
-      <input type="checkbox" checked disabled aria-label="Nezbytné cookies (vždy zapnuto)">
-    </div>
-    <div class="cookie-modal__row">
-      <div>
-        <strong>Mapa (Google Maps)</strong>
-        <p>Umožní zobrazit interaktivní mapu s&nbsp;polohou ordinace.</p>
-      </div>
-      <input type="checkbox" id="cookiePrefMaps" aria-label="Cookies pro mapu">
-    </div>
-    <div class="cookie-modal__actions">
-      <button class="btn btn--outline btn--small" id="cookieModalClose" type="button">Zrušit</button>
-      <button class="btn btn--accent btn--small" id="cookieModalSave" type="button">Uložit předvolby</button>
-    </div>
-  </div>
-</div>
 
 <script src="js/script.js" defer></script>
 </body>
