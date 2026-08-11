@@ -328,7 +328,7 @@ section[id] { scroll-margin-top: 5.5rem; }
 }
 .about__media--placeholder .icon-tooth { width: 2.5rem; height: 2.5rem; }
 .about__media--placeholder span { font-size: var(--fs-sm); font-weight: 600; }
-.about__content #about-h2 { max-width: none; }
+.about__content #about-h2 { max-width: none; text-wrap: wrap; }
 .about__content p:not(.eyebrow) { margin-bottom: var(--sp-2); max-width: 60ch; }
 .about__content .btn { margin-top: var(--sp-2); }
 
