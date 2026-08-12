@@ -3,15 +3,43 @@
 
   document.getElementById("rok").textContent = new Date().getFullYear();
 
-  /* Přesná výška hlavičky pro layout hero sekce na 100 % výšky okna */
+  /* Přesná výška hlavičky a info lišty pro layout hero sekce na 100 % výšky okna */
   var siteHeader = document.querySelector(".site-header");
+  var infobar = document.querySelector(".infobar");
   function setHeaderHeightVar() {
     if (siteHeader) {
       document.documentElement.style.setProperty("--header-h", siteHeader.offsetHeight + "px");
     }
   }
+  function setInfobarHeightVar() {
+    if (infobar) {
+      document.documentElement.style.setProperty("--infobar-h", infobar.offsetHeight + "px");
+    }
+  }
   setHeaderHeightVar();
+  setInfobarHeightVar();
   window.addEventListener("resize", setHeaderHeightVar);
+  window.addEventListener("resize", setInfobarHeightVar);
+
+  /* Zmenšení info lišty poté, co se při scrollu přilepí pod menu */
+  var infobarSentinel = document.querySelector(".infobar-sentinel");
+  if (infobar && infobarSentinel && "IntersectionObserver" in window) {
+    var infobarObserver;
+    function setupInfobarObserver() {
+      if (infobarObserver) infobarObserver.disconnect();
+      infobarObserver = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            infobar.classList.toggle("is-pinned", !entry.isIntersecting);
+          });
+        },
+        { rootMargin: "-" + (siteHeader ? siteHeader.offsetHeight : 76) + "px 0px 0px 0px" }
+      );
+      infobarObserver.observe(infobarSentinel);
+    }
+    setupInfobarObserver();
+    window.addEventListener("resize", setupInfobarObserver);
+  }
 
   /* Mobilní menu */
   var toggle = document.getElementById("navToggle");
