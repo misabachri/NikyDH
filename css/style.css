@@ -443,7 +443,7 @@ section[id] { scroll-margin-top: 5.5rem; }
   font-size: clamp(1.25rem, 1.1rem + 0.7vw, 1.5rem);
   line-height: 1.25; margin-bottom: var(--sp-4);
 }
-.booking__steps .timeline--vertical .timeline__step:not(:last-child)::before { border-left-color: rgba(56,70,79,0.25); }
+.booking__steps .timeline--vertical .timeline__step:not(:last-child)::before { border-left-color: var(--color-rose); }
 .booking__steps .timeline__num { background: var(--color-secondary-bg); border-color: rgba(56,70,79,0.25); color: var(--color-text); }
 .booking__steps .timeline__text p { opacity: 0.7; }
 

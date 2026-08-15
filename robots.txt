@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.nikolamourkova.cz/sitemap.xml
+Sitemap: https://nikolamourkova.cz/sitemap.xml

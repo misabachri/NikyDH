@@ -23,5 +23,5 @@
 
 ## Stránky
 
-- [Hlavní stránka](https://www.nikolamourkova.cz/): hero, o mně, služby, rezervace, FAQ, kontakt
-- [Zásady ochrany osobních údajů](https://www.nikolamourkova.cz/ochrana-osobnich-udaju)
+- [Hlavní stránka](https://nikolamourkova.cz/): hero, o mně, služby, rezervace, FAQ, kontakt
+- [Zásady ochrany osobních údajů](https://nikolamourkova.cz/ochrana-osobnich-udaju)
