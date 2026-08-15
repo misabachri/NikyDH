@@ -90,4 +90,24 @@
   } else {
     revealEls.forEach(function (el) { el.classList.add("is-visible"); });
   }
+
+  /* Cookie lišta */
+  var cookieBar = document.getElementById("cookieBar");
+  var cookieAccept = document.getElementById("cookieAccept");
+  var cookieReject = document.getElementById("cookieReject");
+  if (cookieBar) {
+    if (!localStorage.getItem("cookieConsent")) {
+      cookieBar.hidden = false;
+    }
+    function setConsent(value) {
+      localStorage.setItem("cookieConsent", value);
+      cookieBar.hidden = true;
+    }
+    if (cookieAccept) {
+      cookieAccept.addEventListener("click", function () { setConsent("accepted"); });
+    }
+    if (cookieReject) {
+      cookieReject.addEventListener("click", function () { setConsent("rejected"); });
+    }
+  }
 })();
