@@ -303,6 +303,8 @@ section[id] { scroll-margin-top: 5.5rem; }
   letter-spacing: 0.02em;
   transition: font-size var(--transition);
 }
+.infobar p svg { flex-shrink: 0; }
+.infobar__text { flex: 1 1 auto; min-width: 0; }
 
 /* jakmile lišta při scrollu dojede pod menu, přilepí se tam */
 .infobar {
@@ -317,23 +319,9 @@ section[id] { scroll-margin-top: 5.5rem; }
 @media (max-width: 640px) {
   .infobar { padding-inline: var(--sp-2); }
   .infobar.is-pinned p { font-size: var(--fs-sm); }
-  .infobar p {
-    justify-content: flex-start;
-    flex-wrap: nowrap;
-    font-size: var(--fs-sm);
-  }
-  .infobar p svg { flex-shrink: 0; }
+  .infobar p { font-size: var(--fs-sm); }
   .infobar p svg:first-child { margin-inline-start: var(--sp-1); }
   .infobar p svg:last-child { margin-inline-end: var(--sp-1); }
-  .infobar__text {
-    flex: 1 1 auto;
-    min-width: 0;
-    overflow-x: auto;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-  }
-  .infobar__text::-webkit-scrollbar { display: none; }
 }
 
 /* ==========================================================================

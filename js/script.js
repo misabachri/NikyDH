@@ -31,6 +31,7 @@
         function (entries) {
           entries.forEach(function (entry) {
             infobar.classList.toggle("is-pinned", !entry.isIntersecting);
+            setInfobarHeightVar();
           });
         },
         { rootMargin: "-" + (siteHeader ? siteHeader.offsetHeight : 76) + "px 0px 0px 0px" }
