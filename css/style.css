@@ -304,7 +304,7 @@ section[id] { scroll-margin-top: 5.5rem; }
   transition: font-size var(--transition);
 }
 .infobar p svg { flex-shrink: 0; }
-.infobar__text { flex: 1 1 auto; min-width: 0; }
+.infobar__text { flex: 0 1 auto; min-width: 0; }
 
 /* jakmile lišta při scrollu dojede pod menu, přilepí se tam */
 .infobar {
@@ -670,7 +670,7 @@ section[id] { scroll-margin-top: 5.5rem; }
   box-shadow: var(--shadow-soft);
   padding: var(--sp-3);
   display: flex; flex-direction: column; gap: var(--sp-2);
-  width: min(22rem, calc(100vw - var(--sp-2) * 2));
+  width: min(28rem, calc(100vw - var(--sp-2) * 2));
 }
 .cookie-bar[hidden] { display: none; }
 .cookie-bar p { font-size: var(--fs-sm); margin: 0; }

@@ -20,6 +20,20 @@
   setInfobarHeightVar();
   window.addEventListener("resize", setHeaderHeightVar);
   window.addEventListener("resize", setInfobarHeightVar);
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(function () {
+      setHeaderHeightVar();
+      setInfobarHeightVar();
+    });
+  }
+  if ("ResizeObserver" in window) {
+    if (siteHeader) {
+      new ResizeObserver(setHeaderHeightVar).observe(siteHeader);
+    }
+    if (infobar) {
+      new ResizeObserver(setInfobarHeightVar).observe(infobar);
+    }
+  }
 
   /* Zmenšení info lišty poté, co se při scrollu přilepí pod menu */
   var infobarSentinel = document.querySelector(".infobar-sentinel");
